@@ -1,2 +1,1 @@
-# terraform-k8s
-A sample repo with example of terraform kubernetes provider
+# Jenkins server installation on Ubuntu Xenial
