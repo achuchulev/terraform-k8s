@@ -14,7 +14,29 @@ which nginx &>/dev/null || {
   echo No, nginx is not installed
   sudo apt-get install -y nginx
   }
-  
+
+# Configure nginx as a proxy for jenkins server from port 8080 to 80
+
+# stop nginx service
+systemctl enable nginx
+systemctl stop nginx
+
+# remove default conf of nginx
+[ -f /etc/nginx/sites-available/default ] && {
+  rm -fr /etc/nginx/sites-available/default
+}
+
+# copy our nginx conf
+cp nginx.conf /etc/nginx/sites-available/default 
+
+# start nginx service
+systemctl start nginx
+
+# install java-jdk
+which default-jdk &>/dev/null || {
+  sudo apt-get install default-jdk
+}
+
 # install jenkins  
 which jenkins &>/dev/null || {
   wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
@@ -23,12 +45,11 @@ which jenkins &>/dev/null || {
   sudo apt-get install jenkins
 }
 
+systemctl enable jenkins.service
+systemctl start jenkins.service
+
 # install selinux tools
-which setroubleshoot-server selinux-policy-devel  &>/dev/null || {
-  sudo apt-get install -y setroubleshoot-server selinux-policy-devel
+which selinux-utils  &>/dev/null || {
+  sudo apt-get install -y selinux-utils
   }
 
-# install git
-#which git &>/dev/null || {
-#  sudo apt-get install -y git
-#}
