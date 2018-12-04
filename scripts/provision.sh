@@ -45,8 +45,8 @@ which jenkins &>/dev/null || {
   sudo apt-get install -y jenkins
 }
 
-systemctl enable jenkins.service
-systemctl start jenkins.service
+sudo systemctl enable jenkins.service
+sudo systemctl start jenkins.service
 
 # install selinux tools
 #which selinux-utils  &>/dev/null || {
