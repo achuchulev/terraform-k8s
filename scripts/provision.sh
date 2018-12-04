@@ -8,31 +8,7 @@ which wget curl telnet unzip &>/dev/null || {
   sudo apt-get install -y wget curl telnet unzip
 }
 
-# check if nginx is installed
-# install nginx if not installed
-#which nginx &>/dev/null || {
-#  echo No, nginx is not installed
-#  sudo apt-get install -y nginx
-#  }
-
-# Configure nginx as a proxy for jenkins server from port 8080 to 80
-
-# stop nginx service
-#systemctl enable nginx
-#systemctl stop nginx
-
-# remove default conf of nginx
-#[ -f /etc/nginx/sites-available/default ] && {
-#  rm -fr /etc/nginx/sites-available/default
-#}
-
-# copy our nginx conf
-#cp nginx.conf /etc/nginx/sites-available/default 
-
-# start nginx service
-#systemctl start nginx
-
-# install java-jdk
+# install java-jdk required for jenkins to run
 which default-jdk &>/dev/null || {
   sudo apt-get install -y default-jdk
 }
@@ -47,9 +23,3 @@ which jenkins &>/dev/null || {
 
 sudo systemctl enable jenkins.service
 sudo systemctl start jenkins.service
-
-# install selinux tools
-#which selinux-utils  &>/dev/null || {
-#  sudo apt-get install -y selinux-utils
-#  }
-
