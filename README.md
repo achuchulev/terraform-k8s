@@ -33,9 +33,6 @@ Vagrant up run:
 ### Configure Jenkis
 
 - [click to open Jenkins portal](http://127.0.0.1:8080/)
-- unlock Jenkins using the administrator password to unlock password
+- unlock Jenkins using the administrator password
 - customize Jenkins selecting which plugins to install
 - create account
-
-
-
