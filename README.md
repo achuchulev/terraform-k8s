@@ -28,8 +28,14 @@ scripts/provision.sh that:
 - install java-jdk required for jenkins to run
 - install jenkins
 - enable and start jenkins service
-- print Jenkins unlock password
+- print Jenkins administrator password
 
-## Configure Jenkis
+### Configure Jenkis
+
+- [click to open Jenkins portal](http://127.0.0.1:8080/)
+- unlock Jenkins using the administrator password to unlock password
+- customize Jenkins selecting which plugins to install
+- create account
+
 
 
