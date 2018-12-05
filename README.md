@@ -32,7 +32,7 @@ Vagrant up run:
 
 ### Configure Jenkis
 
-- [click here to open Jenkins portal](http://172.17.8.104:8080/)
+- [click to access the Jenkins Server](http://172.17.8.104:8080/)
 - unlock Jenkins using the temporary administrator password
 - customize Jenkins selecting which plugins to install
 - Create First Admin User
