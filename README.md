@@ -28,11 +28,11 @@ Vagrant up run:
 - install java-jdk required for jenkins to run
 - install jenkins
 - enable and start jenkins service
-- print Jenkins administrator password
+- print Jenkins temporary administrator password
 
 ### Configure Jenkis
 
-- [click here to open Jenkins portal](http://172.17.8.104:8080/)
-- unlock Jenkins using the administrator password
+- [click to access the Jenkins Server](http://172.17.8.104:8080/)
+- unlock Jenkins using the temporary administrator password
 - customize Jenkins selecting which plugins to install
-- create account
+- Create First Admin User
