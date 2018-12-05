@@ -24,6 +24,6 @@ which jenkins &>/dev/null || {
 sudo systemctl enable jenkins.service
 sudo systemctl start jenkins.service
 
-sleep 15s
+sleep 5s
 
 echo "Unlock Jenkins password is:" && sudo cat /var/lib/jenkins/secrets/initialAdminPassword
