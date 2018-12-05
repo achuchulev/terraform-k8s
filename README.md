@@ -23,7 +23,7 @@ vagrant up
 
 Vagrant up run:
 
-scripts/provision.sh that:
+`scripts/provision.sh` that:
 
 - install java-jdk required for jenkins to run
 - install jenkins
