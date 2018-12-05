@@ -28,5 +28,8 @@ scripts/provision.sh that:
 - install java-jdk required for jenkins to run
 - install jenkins
 - enable and start jenkins service
+- print Jenkins unlock password
 
 ## Configure Jenkis
+
+
