@@ -9,7 +9,7 @@ which wget curl telnet unzip &>/dev/null || {
 }
 
 # install java-jdk required for jenkins to run
-which default-jdk &>/dev/null || {
+which java &>/dev/null || {
   sudo apt install -y default-jdk
 }
 
